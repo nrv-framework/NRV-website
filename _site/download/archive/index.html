@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=2023-12-11">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#555555">
+    <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#555555">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/customsty.css">
+
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/assets/fontawesome/js/fontawesome.js"></script>
+    <script src="/assets/fontawesome/js/brands.js"></script>
+    <script src="/assets/fontawesome/js/solid.js"></script>
+    <script type='text/javascript'>
+document.getElementById("MathJax-script").addEventListener('load', function () {
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    displayMath: [['[[',']]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+}});
+</script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Download | NRV Framework</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Download" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Open-source finite element library" />
+<meta property="og:description" content="Open-source finite element library" />
+<link rel="canonical" href="http://0.0.0.0:4000/download/archive/" />
+<meta property="og:url" content="http://0.0.0.0:4000/download/archive/" />
+<meta property="og:site_name" content="NRV Framework" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Download" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Open-source finite element library","headline":"Download","url":"http://0.0.0.0:4000/download/archive/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+
+<body>
+<!-- HEADER -->
+<div id="nav_head">
+  <header class="inner" id="nav_head_inner">
+    <a id="logo" href="/"><img src="/assets/img/fenics-logo-small.png"></a>
+    <div class="top-navigation">
+  <nav role="navigation" id="site-nav" class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/download">Download</a></li>
+      
+        <li><a href="/documentation">Documentation</a></li>
+      
+        <li><a href="/community">Community</a></li>
+      
+        <li><a href="/citing">Citing</a></li>
+      
+    </ul>
+  </nav>
+</div>
+
+  </header>
+</div>
+
+  <div id="header_wrap" class="outer" style="background-image:url(/assets/img/headers/fenics_fire.png);background-repeat:repeat">
+
+  <header class="inner lesstall">
+
+  <h1 id="project_title">Download</h1>
+
+  </header>
+</div>
+
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+  <section id="main_content" class="inner">
+    
+    <p>The latest stable release of legacy FEniCS is version 2019.1.0, which was released
+in April 2019.</p>
+
+<h2 id="fenics-on-docker">FEniCS on Docker</h2>
+
+<p>To use our prebuilt, high-performance
+<a href="https://www.docker.com/community-edition">Docker</a> images, first install
+<a href="https://www.docker.com/products/docker-desktop">Docker CE</a> for your
+platform (Windows, Mac or Linux) and then run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-ti</span> <span class="nt">-p</span> 127.0.0.1:8000:8000 <span class="nt">-v</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>:/root/shared <span class="nt">-w</span> /root/shared ghcr.io/scientificcomputing/fenics-gmsh:2024-05-30
+</code></pre></div></div>
+
+<h2 id="fenics-on-windows-10">FEniCS on Windows 10</h2>
+
+<p>To install FEniCS on Windows 10, enable the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for
+Linux</a> and
+install the Ubuntu distribution. Then follow the instructions for Ubuntu
+below.</p>
+
+<h2 id="ubuntu-fenics-on-ubuntu">Ubuntu FEniCS on Ubuntu</h2>
+
+<p>To install FEniCS on Ubuntu, run the following commands:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>software-properties-common
+<span class="nb">sudo </span>add-apt-repository ppa:fenics-packages/fenics
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>fenics
+</code></pre></div></div>
+
+<p>For detailed instructions, see the <a href="http://fenics-containers.readthedocs.io/en/latest/index.html">FEniCS Reference
+Manual</a>.</p>
+
+<h2 id="fenics-on-anaconda">FEniCS on Anaconda</h2>
+
+<p>To use our prebuilt Anaconda Python packages (Linux and Mac only), first
+<a href="https://docs.continuum.io/anaconda/install">install Anaconda</a>, then run
+following commands in your terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> fenicsproject <span class="nt">-c</span> conda-forge fenics
+<span class="nb">source </span>activate fenicsproject
+</code></pre></div></div>
+
+<p>For further information on using Anaconda, see the
+<a href="https://docs.continuum.io/anaconda/">documentation</a>.</p>
+
+<p><strong>Warning</strong>: FEniCS Anaconda recipes are maintained by the community and
+distributed binary packages do not have a full feature set yet,
+especially regarding sparse direct solvers and input/output facilities.</p>
+
+<p><strong>Update</strong>. 2017.2.0 release on <code class="language-plaintext highlighter-rouge">conda-forge</code> features MUMPS direct
+solver, but lacks SuperLU_dist and MPI-enabled HDF5.</p>
+
+<h2 id="building-fenics-from-source">Building FEniCS from source</h2>
+
+<p>For installation in high performance computing clusters we recommend
+always building from source. For detailed instructions, see the <a href="https://fenics.readthedocs.io/en/latest/installation.html">FEniCS
+Reference
+Manual</a>.</p>
+
+  </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+  <footer class="inner">
+    &copy; NRV framework. Changes to this website can be made/suggested on <a href='https://github.com/nrv-framwork/NRV-website'>GitHub</a>.
+  </footer>
+</div>
+
+
+</body>
+</html>

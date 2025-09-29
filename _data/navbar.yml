@@ -1,0 +1,13 @@
+# Site navigation links
+- title: Home
+  page: /
+- title: Download
+  page: /download
+- title: Documentation
+  page: /documentation
+- title: Community
+  page: /community
+- title: Citing
+  page: /citing
+#- title: <i class="fa-solid fa-arrow-up-right-from-square"></i> Donate
+#  page: https://numfocus.org/donate-to-fenics
