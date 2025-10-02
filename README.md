@@ -76,3 +76,5 @@ docker-compose up
 
 The website is then served locally (so it can then be opened in a browser) by running:
 
+### Building
+the building and deployement of the website is automatized with Github action
