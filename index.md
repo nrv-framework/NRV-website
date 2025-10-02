@@ -16,7 +16,7 @@ ranging from laptops to high-performance computers.
 <center>
 {% include _large_icon.html icon="fa-solid fa-download" href="download/" label="Download"
 %}{% include _large_icon.html icon="fa-solid fa-book" href="documentation/" label="Documentation"
-%}{% include _large_icon.html icon="fa-brands fa-github" href="https://github.com/FEniCS" label="Source code"
+%}{% include _large_icon.html icon="fa-brands fa-github" href="https://github.com/nrv-framework/" label="Source code"
 %}
 </center>
 
