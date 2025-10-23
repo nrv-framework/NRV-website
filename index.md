@@ -3,28 +3,21 @@ title: NRV Framework
 subtitle: logo
 ---
 
-## The FEniCS computing platform
+## The NRV Framework - a brief introduction
 
-FEniCS is a popular open-source computing platform for solving partial
-differential equations (PDEs) with the finite element method (FEM). FEniCS enables users to quickly
-translate scientific models into efficient finite element code. With the
-high-level Python and C++ interfaces to FEniCS, it is easy to get
-started, but FEniCS offers also powerful capabilities for more
-experienced programmers. FEniCS runs on a multitude of platforms
-ranging from laptops to high-performance computers.
+NRV (NeuRon Virtualizer) is a Python-based framework designed to enable fast and user-friendly simulations of the Peripheral Nervous System. Computations are performed under the quasistatic approximation of Maxwell’s equations, and ephaptic coupling is not considered. Stimulation waveforms can have arbitrary shapes, and any combination of electrodes can be used to model complex stimulation strategies. NRV simulates the physics associated to: electrical stimulation, extracellular potentials as well as bio-impedance of single fiber to complex and geometrically-detailed full nerve structures.
+
+NRV is optimized for simulations involving large axon populations—from generating realistic axon populations based on specific diameter distributions, to automated spatial placement, computation, and post-processing of axonal responses to stimulation. Parallel computation and interfaces with NEURON (used for neural dynamics), and FEniCS (used for Finite Element modeling) are seamlessly managed by NRV.
 
 <center>
 {% include _large_icon.html icon="fa-solid fa-download" href="download/" label="Download"
 %}{% include _large_icon.html icon="fa-solid fa-book" href="documentation/" label="Documentation"
 %}{% include _large_icon.html icon="fa-brands fa-github" href="https://github.com/nrv-framework/" label="Source code"
-%}
-</center>
-
-<center>
-{% include _large_icon.html icon="fa-brands fa-linkedin" href="https://www.linkedin.com/company/fenics-project" label="LinkedIn"
 %}{% include _large_icon.html icon="fa-brands fa-slack" href="https://join.slack.com/t/fenicsproject/shared_invite/zt-2wa76d0xw-ecfxcPj25K8pc7q7~1AK8g" label="Slack"
 %}
 </center>
+
+
 
 FEniCS is a [NumFOCUS](https://www.numfocus.org/) fiscally supported
 project. If you like FEniCS and want to support our mission to produce

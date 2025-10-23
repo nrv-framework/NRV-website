@@ -1,24 +1,15 @@
 ---
 title: Documentation
-subtitle: FEniCSx fenicsxversion
+subtitle: NRV tutorials and help
 permalink: /documentation/
 ---
 
-## Getting started
-
-If you're new to FEniCS, we suggest starting with the [DOLFINx Python demos](https://docs.fenicsproject.org/dolfinx/v{{site.dolfinxversion}}/python/demos.html),
-or [the FEniCSx tutorial](https://jorgensd.github.io/dolfinx-tutorial/).
-
-If you have questions about how to use FEniCS, you can find links to how to do this on the [community page](../community/index.md).
-
 ## Documentation
 
-Full documentation of the components of FEniCSx is available at
-[https://docs.fenicsproject.org/](https://docs.fenicsproject.org/).
+Full documentation of NRV is available at [https://nrv.readthedocs.io/](https://nrv.readthedocs.io/).
 
-[The FEniCSx tutorial](https://jorgensd.github.io/dolfinx-tutorial/)
-provides a range of tutorial programs as Jupyter notebooks.
+**Note :** the documentation will in a near future move to https://www.docs.nrv-framework.org.
 
 ### Release notes
 
-- [Release notes: v0.9.0](./v0_9_0.md)
+- [Current Release notes:](#)
