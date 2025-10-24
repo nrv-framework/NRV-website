@@ -1,8 +1,6 @@
 # Site navigation links
 - title: Home
   page: /
-- title: Download
-  page: /download
 - title: Documentation
   page: /documentation
 - title: Community
