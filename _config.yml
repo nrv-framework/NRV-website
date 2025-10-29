@@ -1,12 +1,9 @@
 theme: jekyll-theme-slate
 site_favicon: favicon.ico
 title: NRV Framework
-description: Open-source finite element library
-fenicsversion: 2019.1.0
-fenicsversiondate: April 2019
-fenicsxversion: 0.9
-dolfinxversion: 0.9.0 # this is used in the URL of the Python demos
-fenicsxversiondate: October 2024
+description:  'NeuRon Virtualizer'
+nrvxversion: 1.3.1
+nrvxversiondate: October 2025
 
 defaults:
   -
