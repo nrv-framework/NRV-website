@@ -50,8 +50,8 @@ window.MathJax = {
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="Documentation" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Open-source finite element library" />
-<meta property="og:description" content="Open-source finite element library" />
+<meta name="description" content="NeuRon Virtualizer" />
+<meta property="og:description" content="NeuRon Virtualizer" />
 <link rel="canonical" href="http://0.0.0.0:4000/documentation/" />
 <meta property="og:url" content="http://0.0.0.0:4000/documentation/" />
 <meta property="og:site_name" content="NRV Framework" />
@@ -59,7 +59,7 @@ window.MathJax = {
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Documentation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Open-source finite element library","headline":"Documentation","url":"http://0.0.0.0:4000/documentation/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"NeuRon Virtualizer","headline":"Documentation","url":"http://0.0.0.0:4000/documentation/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -109,17 +109,63 @@ window.MathJax = {
 <div id="main_content_wrap" class="outer">
   <section id="main_content" class="inner">
     
-    <h2 id="documentation">Documentation</h2>
+    <h2 id="full-documentation">Full Documentation</h2>
 
 <p>Full documentation of NRV is available at <a href="https://nrv.readthedocs.io/">https://nrv.readthedocs.io/</a>.</p>
 
 <p><strong>Note :</strong> the documentation will in a near future move to https://www.docs.nrv-framework.org.</p>
 
-<h3 id="release-notes">Release notes</h3>
+<h2 id="a-quick-example">A quick example</h2>
+<p>NRV is based on a very basic idea: it should be easy to describe an electrophysiological setup, especially using object-oriented syntax. Here is a basic script, that define two axons (one unmyelinated and one myelinated), place an intra-cellular clamp with a current-stimulus. The simulation then computes the response from the fiber:</p>
 
-<ul>
-  <li><a href="#">Current Release notes:</a></li>
-</ul>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">nrv</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+
+    <span class="c1"># axon def
+</span>    <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>                                           <span class="c1"># axon y position, in [um]
+</span>    <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>                                           <span class="c1"># axon z position, in [um]
+</span>    <span class="n">d</span> <span class="o">=</span> <span class="mi">6</span>                                           <span class="c1"># axon diameter, in [um]
+</span>    <span class="n">L</span> <span class="o">=</span> <span class="mi">5000</span>                                        <span class="c1"># axon length, along x axis, in [um]
+</span>    <span class="n">axon1</span> <span class="o">=</span> <span class="n">nrv</span><span class="p">.</span><span class="n">myelinated</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">rec</span><span class="o">=</span><span class="s">'all'</span><span class="p">)</span>
+
+    <span class="n">t_start</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="n">amplitude</span> <span class="o">=</span> <span class="mf">0.35</span>
+
+    <span class="n">amplitude</span> <span class="o">=</span> <span class="mf">0.195</span>
+    <span class="n">axon2</span> <span class="o">=</span> <span class="n">nrv</span><span class="p">.</span><span class="n">unmyelinated</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">dt</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span><span class="n">Nrec</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+    <span class="n">axon1</span><span class="p">.</span><span class="n">insert_I_Clamp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">t_start</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
+
+    <span class="n">amplitude</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">axon2</span><span class="p">.</span><span class="n">insert_I_Clamp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">t_start</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
+
+
+    <span class="n">results</span> <span class="o">=</span> <span class="n">axon1</span><span class="p">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">t_sim</span><span class="o">=</span><span class="mf">4.5</span><span class="p">)</span>
+    <span class="k">del</span> <span class="n">axon1</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">cbar</span> <span class="o">=</span> <span class="n">results</span><span class="p">.</span><span class="n">colormap_plot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="s">"V_mem"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'Time (ms)'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'x-position (µm)'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'propagation along myelinated fiber'</span><span class="p">)</span>
+    <span class="n">cbar</span><span class="p">.</span><span class="n">set_label</span><span class="p">(</span><span class="sa">r</span><span class="s">'Membrane Voltage $V_m$ (mV)'</span><span class="p">)</span>
+
+    <span class="n">results</span> <span class="o">=</span> <span class="n">axon2</span><span class="p">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">t_sim</span><span class="o">=</span><span class="mf">4.5</span><span class="p">)</span>
+    <span class="c1">#nrv.rasterize(results,'V_mem')
+</span>    <span class="k">del</span> <span class="n">axon2</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">cbar</span> <span class="o">=</span> <span class="n">results</span><span class="p">.</span><span class="n">colormap_plot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="s">"V_mem"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'Time (ms)'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'x-position (µm)'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'propagation along unmyelinated fiber'</span><span class="p">)</span>
+    <span class="n">cbar</span><span class="p">.</span><span class="n">set_label</span><span class="p">(</span><span class="sa">r</span><span class="s">'Membrane Voltage $V_m$ (mV)'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>which should generate the following figures:</p>
 
   </section>
 </div>

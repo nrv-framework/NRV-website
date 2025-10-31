@@ -15,7 +15,9 @@ NRV is optimized for simulations involving large axon populations—from generat
 {% include _large_icon.html icon="fa-solid fa-download" href="https://pypi.org/project/nrv-py/" label="Install"%}
 
 
-{% include _large_icon.html icon="fa-brands fa-discord" href="https://join.slack.com/t/fenicsproject/shared_invite/zt-2wa76d0xw-ecfxcPj25K8pc7q7~1AK8g" label="Discord"%}
+{% include _large_icon.html icon="fa-brands fa-discord" href="#" label="Discord"%}
+
+{% include _large_icon.html icon="fa-solid fa-gears" href="https://mybinder.org/v2/gh/nrv-framework/NRV-demo/main" label="Try on Binder"%}
 </center>
 
 

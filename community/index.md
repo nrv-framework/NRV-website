@@ -19,10 +19,8 @@ please post complete but minimal code examples.
 
 We encourage users to take active part in developing and documenting
 NRV. As an active developer, it is easy to influence the direction
-and focus of the project. To contribute to NRV development, engage
-with other developers on the [FEniCSx Slack
-channels](https://fenicsproject.slack.com/): in particular, you should
-join the **#fenicsx** and **#development** channels.
+and focus of the project. To find help on joining our efforts to provide code actually usable
+for scientific community, we encourage interested contributor to read our [developper's corner documentation](https://nrv.readthedocs.io/en/latest/devcorner.html).
 
 ## Code of Conduct
 
