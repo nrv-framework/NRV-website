@@ -10,7 +10,6 @@ Full documentation of NRV is available at [https://nrv.readthedocs.io/](https://
 
 **Note :** the documentation will in a near future move to https://www.docs.nrv-framework.org.
 
-
 ## A quick example
 NRV is based on a very basic idea: it should be easy to describe an electrophysiological setup, especially using object-oriented syntax. Here is a basic script, that define two axons (one unmyelinated and one myelinated), place an intra-cellular clamp with a current-stimulus. The simulation then computes the response from the fiber:
 
