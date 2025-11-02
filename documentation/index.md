@@ -62,3 +62,9 @@ if __name__ == '__main__':
 ```
 
 which should generate the following figures: 
+
+![NRV_Example01](/assets/img/nrv_exp_01.png){: .image-center }
+![NRV_Example02](/assets/img/nrv_exp_02.png){: .image-center }
+
+## Online Demo
+If you want to test NRV by your own, you can connect to [myBinder throught this link](https://mybinder.org/v2/gh/nrv-framework/NRV-demo/main), and will be able to explore few more examples. If you want to explore these examples off-line you can get them on [github](https://github.com/nrv-framework/NRV-demo), and you can also have a look at our [tutorials](https://nrv.readthedocs.io/en/latest/tutorials/index.html) and [example gallery](https://nrv.readthedocs.io/en/latest/examples/index.html#) directly in the documentation. 
