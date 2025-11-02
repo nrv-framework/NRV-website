@@ -1,0 +1,23 @@
+name: New Content
+description: Suggest or request a new content (paragraph or page)
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the sections below to properly describe the new content you are suggesting.
+  - type: textarea
+    id: rationale
+    attributes:
+      label: It should be add to inform about
+      placeholder: It will allow to understant...
+  - type: dropdown
+    id: assign
+    attributes:
+      label: "Would you like to work on this issue?"
+      options:
+        - "Yes"
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your suggestion! Let's see together if it can be implemented.

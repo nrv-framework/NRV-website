@@ -1,0 +1,23 @@
+name: Correction 
+description: Suggest or request a correction
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the sections below to properly describe the problem you found.
+  - type: textarea
+    id: rationale
+    attributes:
+      label: How it should be corrected
+      placeholder: The correct information is...
+  - type: dropdown
+    id: assign
+    attributes:
+      label: "Would you like to work on this issue?"
+      options:
+        - "Yes"
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your suggestion! Let's see together if it can be implemented.
