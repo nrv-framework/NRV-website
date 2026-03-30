@@ -37,6 +37,7 @@ jobs:
           host: ${{ secrets.FTP_HOST_VPS }}
           username: ${{ secrets.FTP_LOGIN_VPS }}
           key: ${{ secrets.SFTP_PRIVATE_KEY }}
+          port: 2222  # Ajoutez cette ligne
           source: "_site/"
           target: ${{ secrets.FTP_FOLDER }}
           strip_components: 1
