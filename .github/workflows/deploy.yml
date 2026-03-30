@@ -15,14 +15,21 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
-          bundler: 2.5.23
-          bundler-cache: true
+          bundler-cache: false
+
+      - name: Upgrade RubyGems and install Bundler
+        run: |
+          gem update --system 3.3.22
+          gem install bundler -v 2.5.23
+
+      - name: Install gems
+        run: bundle _2.5.23_ install
 
       - name: Install ncftp
         run: sudo apt-get update && sudo apt-get install -y ncftp
 
       - name: Build Site with Jekyll
-        run: bundle exec jekyll build
+        run: bundle _2.5.23_ exec jekyll build
 
       - name: Upload site to FTP
         env:
