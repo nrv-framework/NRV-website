@@ -40,4 +40,5 @@ jobs:
           port: 2222  # Ajoutez cette ligne
           source: "_site/"
           target: ${{ secrets.FTP_FOLDER }}
+          debug: true
           strip_components: 1
