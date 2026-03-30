@@ -1,0 +1,42 @@
+name: Build & Upload Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: false
+
+      - name: Upgrade RubyGems and install Bundler
+        run: |
+          gem update --system 3.3.22
+          gem install bundler -v 2.5.23
+
+      - name: Install gems
+        run: bundle _2.5.23_ install
+
+      - name: Install ncftp
+        run: sudo apt-get update && sudo apt-get install -y ncftp
+
+      - name: Build Site with Jekyll
+        run: bundle _2.5.23_ exec jekyll build
+
+      - name: Upload site to SFTP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.FTP_HOST_VPS }}
+          username: ${{ secrets.FTP_LOGIN_VPS }}
+          key: ${{ secrets.SFTP_PRIVATE_KEY }}
+          source: "_site/"
+          target: ${{ secrets.FTP_FOLDER }}
+          strip_components: 1
