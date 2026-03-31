@@ -39,4 +39,4 @@ jobs:
           ssh-keyscan -p 2222 ${{ secrets.FTP_HOST_VPS }} >> ~/.ssh/known_hosts
           
           # Sync via rsync over SSH (only transfers changed files)
-          rsync --protocol=30 -avz --delete -e "ssh -i ~/.ssh/id_ed25519 -p 2222 -o StrictHostKeyChecking=no" _site/ publishbot@${{ secrets.FTP_HOST_VPS }}:www/
+          rsync --protocol=29 -avz --delete -e "ssh -i ~/.ssh/id_ed25519 -p 2222 -o StrictHostKeyChecking=no -o LogLevel=QUIET" _site/ publishbot@${{ secrets.FTP_HOST_VPS }}:www/
