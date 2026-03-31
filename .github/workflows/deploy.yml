@@ -25,8 +25,8 @@ jobs:
       - name: Install gems
         run: bundle _2.5.23_ install
 
-      - name: Install ncftp
-        run: sudo apt-get update && sudo apt-get install -y ncftp
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
 
       - name: Build Site with Jekyll
         run: bundle _2.5.23_ exec jekyll build
@@ -38,4 +38,4 @@ jobs:
           ftp_password: ${{ secrets.FTP_PASSWD }}
           ftp_folder: ${{ secrets.FTP_FOLDER }}
         run: |
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" "$ftp_location" "$ftp_folder" _site/*
+          lftp -c "open ftp://$ftp_location; user $ftp_username $ftp_password; mirror --delete -R _site/ $ftp_folder"

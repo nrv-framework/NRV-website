@@ -3,7 +3,8 @@ site_favicon: favicon.ico
 title: NRV Framework
 description:  'NeuRon Virtualizer'
 nrvxversion: 1.3.1
-nrvxversiondate: October 2025
+nrvxversiondate: March 2026
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile']
 
 defaults:
   -

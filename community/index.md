@@ -5,9 +5,9 @@ permalink: /community/
 
 ## Discord group
 
-Discussions about NRV, using the framework, help for user and development take place on the [NRV-framework Discord group](#). You can join the
+Discussions about NRV, using the framework, help for user and development take place on the NRV-framework Discord group. You can join the
 group by 
-[enter the group at this link](#).
+[enter the group at this link](https://discord.gg/sv4gYXT53F).
 
 ## Reporting bugs
 
